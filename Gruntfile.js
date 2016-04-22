@@ -9,6 +9,10 @@ module.exports = function(grunt) {
     'src/scss/layout/*.scss'
   ];
 
+  var htmlSources = [
+    'src/*.html'
+  ];
+
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -51,6 +55,19 @@ module.exports = function(grunt) {
         }
       }
     },
+    htmlmin: {
+      dist: {
+        options: {
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        files: {
+          'dist/index.html': 'src/index.html',
+          'dist/impressum.html': 'src/impressum.html',
+          'dist/404.html': 'src/404.html'
+        }
+      }
+    },
     watch: {
       js: {
         files: ['<%= jshint.files %>'],
@@ -67,7 +84,8 @@ module.exports = function(grunt) {
         }
       },
       html: {
-        files: ['*.html'],
+        files: htmlSources,
+        tasks: ['htmlmin'],
         options: {
           livereload: true,
         }
@@ -80,6 +98,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
   grunt.registerTask('default', ['watch']);
 
