@@ -42,3 +42,35 @@ p {
     margin-top: $m-small;
     margin-bottom: $m-medium;
 }
+
+.text {
+    font-family: $f-text;
+
+    &--cbase {
+        color: $c-base;
+    }
+
+    &--cdark {
+        color: $c-dark;
+    }
+
+    &--cmedium {
+        color: $c-medium;
+    }
+
+    &--clight {
+        color: $c-light;
+    }
+
+    &--italic {
+        font-style: italic;
+    }
+
+    &--light {
+        font-weight: 300;
+    }
+
+    &--bold {
+        font-weight: 700;
+    }
+}

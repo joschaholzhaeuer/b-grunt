@@ -2,7 +2,6 @@
 STYLESHEET: STYLE
 
     > BREAKPOINTS
-    > VENDOR_PREFIXES_HELPER
     > TYPOGRAPHY
     > KEYFRAMES
     > HORIZONTALLY_CENTER_BLOCK_ELEMENTS
@@ -33,19 +32,6 @@ STYLESHEET: STYLE
     @media only screen and (min-width: #{$w-large}) {
         @content;
     }
-}
-
-
-
-// VENDOR_PREFIXES_HELPER
-// --> @include prefix(transform, rotate(42deg), 'webkit' 'ms');
-
-@mixin prefix($property, $value, $prefixes: ()) {
-  @each $prefix in $prefixes {
-    -#{$prefix}-#{$property}: $value;
-  }
-
-  #{$property}: $value;
 }
 
 

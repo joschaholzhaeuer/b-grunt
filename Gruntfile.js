@@ -47,7 +47,7 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         options: {
-          style: 'compressed',
+          style: 'expanded',
           sourcemap: 'none'
         },
         files: {
@@ -68,6 +68,20 @@ module.exports = function(grunt) {
         }
       }
     },
+    postcss: {
+      options: {
+        map: false,
+        processors: [
+          require('pixrem')(),                                    // add fallbacks for rem units
+          require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
+          require('cssnano')()                                    // minify the result
+        ]
+      },
+      dist: {
+        src: 'dist/css/style.css',
+        dest: 'dist/css/style.min.css'
+      }
+    },
     watch: {
       js: {
         files: ['<%= jshint.files %>'],
@@ -78,7 +92,7 @@ module.exports = function(grunt) {
       },
       css: {
         files: cssSources,
-        tasks: ['sass'],
+        tasks: ['sass', 'postcss'],
         options: {
           livereload: true,
         }
@@ -99,6 +113,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
+  grunt.loadNpmTasks('grunt-postcss');
 
   grunt.registerTask('default', ['watch']);
 
