@@ -9,14 +9,8 @@ The `dist` folder is the one you upload on a server when deploying your project.
 
 ## Steps for installing Grunt
 
-1 Install the grunt command line interface globally
-npm install -g grunt-cli
+- Install the grunt command line interface globally
+'npm install -g grunt-cli'
 
-2 Go to your project folder and create a package.json file
-npm init (without package.json)
-
-3 Install the grunt devDependency
-npm install -S grunt
-
-4 Install all devDependencies
-npm install
+- Install all devDependencies
+'npm install'
