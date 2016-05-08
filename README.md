@@ -11,4 +11,6 @@ The `dist` folder is the one you upload on a server when deploying your project.
 
 - Install the grunt command line interface globally `npm install -g grunt-cli`
 
-- Install all devDependencies `npm install`
+- Install all grunt dev dependencies `npm install`
+
+- Install all postcss plugins `npm install grunt-postcss pixrem autoprefixer cssnano`
