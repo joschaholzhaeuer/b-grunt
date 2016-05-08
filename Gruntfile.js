@@ -2,11 +2,7 @@ module.exports = function(grunt) {
 
 
   var cssSources = [
-    'src/scss/*.scss',
-    'src/scss/modules/*.scss',
-    'src/scss/states/*.scss',
-    'src/scss/base/*.scss',
-    'src/scss/layout/*.scss'
+    'src/scss/**/*.scss'
   ];
 
   var htmlSources = [
@@ -73,7 +69,7 @@ module.exports = function(grunt) {
         map: false,
         processors: [
           require('pixrem')(),                                    // add fallbacks for rem units
-          require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
+          require('autoprefixer')({browsers: 'last 6 versions'}), // add vendor prefixes
           require('cssnano')()                                    // minify the result
         ]
       },
