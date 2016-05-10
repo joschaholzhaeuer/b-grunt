@@ -4,5 +4,21 @@ STYLESHEET: BOX
 ******************************************************************/
 
 .box {
+    text-align: center;
+    background-color: $c-medium;
+    margin: $m-medium auto;
+    padding: $m-medium;
+    width: 90%;
 
+    // css changes at medium breakpoint
+    @include medium {
+        width: 70%;
+        margin: $m-large auto;
+        padding: $m-large;
+    }
+
+    &-heading {
+        margin-bottom: $m-medium;
+        @include font-size(1.6);
+    }
 }

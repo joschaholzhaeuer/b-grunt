@@ -7,6 +7,10 @@ html {
     font-size: 1em;
     line-height: 1.4;
     box-sizing: border-box;
+
+    @include medium {
+        @include font-size(1.1);
+    }
 }
 
 body {

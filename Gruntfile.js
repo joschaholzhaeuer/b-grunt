@@ -44,6 +44,7 @@ module.exports = function(grunt) {
       dist: {
         options: {
           style: 'expanded',
+          require: 'susy',
           sourcemap: 'none'
         },
         files: {

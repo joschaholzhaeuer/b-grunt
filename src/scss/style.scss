@@ -13,6 +13,10 @@ This is the place where scss files get imported.
 @import "includes/normalize";
 
 
+// SUSY
+@import "susy";
+
+
 // MIXINS/VARIABLES
 @import "base/variables";
 @import "base/mixins";
