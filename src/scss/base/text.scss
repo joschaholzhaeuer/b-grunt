@@ -18,8 +18,8 @@ h6 {
 h1 {
     font-size: 1.4rem;
     text-transform: uppercase;
-    margin-top: $m_t_small;
-    margin-bottom: $m_t_medium;
+    margin-top: $m_text_small;
+    margin-bottom: $m_text_medium;
 
     @include medium {
         font-size: 1.6rem;
@@ -47,8 +47,8 @@ h6 {
 }
 
 p {
-    margin-top: $m_t_small;
-    margin-bottom: $m_t_medium;
+    margin-top: $m_text_small;
+    margin-bottom: $m_text_medium;
 }
 
 

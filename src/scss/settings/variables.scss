@@ -50,15 +50,15 @@ $w_large:  1361px;
 MARGINS_TEXT
 This uses 'em' units to target the parent fontsize.
 ******************************************************************/
-$m_t_small:  0.5em;
-$m_t_medium: 1em;
-$m_t_large:  1.5em;
+$m_text_small:  0.5em;
+$m_text_medium: 1em;
+$m_text_large:  1.5em;
 
 
 /******************************************************************
 MARGINS_BOX
 This uses 'rem' units to target the base fontsize.
 ******************************************************************/
-$m_b_small:  0.5rem;
-$m_b_medium: 2rem;
-$m_b_large:  5rem;
+$m_box_small:  0.5rem;
+$m_box_medium: 2rem;
+$m_box_large:  5rem;

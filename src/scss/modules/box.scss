@@ -6,13 +6,13 @@ STYLESHEET: BOX
 .box {
     text-align: center;
     background-color: $c_medium;
-    margin: $m_b_medium auto;
-    padding: $m_b_medium;
+    margin: $m_box_medium auto;
+    padding: $m_box_medium;
     width: 90%;
 
     @include medium {
         width: 70%;
-        margin: $m_b_large auto;
-        padding: $m_b_large;
+        margin: $m_box_large auto;
+        padding: $m_box_large;
     }
 }
