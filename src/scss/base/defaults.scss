@@ -9,13 +9,13 @@ html {
     box-sizing: border-box;
 
     @include medium {
-        @include font-size(1.1);
+        font-size: 1.1em;
     }
 }
 
 body {
-    font-family: $f-base;
-    color: $c-base;
+    font-family: $f_base;
+    color: $c_base;
 }
 
 *,
@@ -38,7 +38,7 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid $c-medium;
+    border-top: 1px solid $c_medium;
     margin: 1em 0;
     padding: 0;
 }

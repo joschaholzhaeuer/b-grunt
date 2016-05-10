@@ -1,6 +1,9 @@
 /******************************************************************
 STYLESHEET: TEXT
 
+    > GENERAL
+    > TEXT_CLASS
+
 ******************************************************************/
 
 h1,
@@ -9,13 +12,18 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $f-heading;
+    font-family: $f_heading;
 }
 
 h1 {
+    font-size: 1.4rem;
     text-transform: uppercase;
-    margin-top: $m-small;
-    margin-bottom: $m-medium;
+    margin-top: $m_t_small;
+    margin-bottom: $m_t_medium;
+
+    @include medium {
+        font-size: 1.6rem;
+    }
 }
 
 h2 {
@@ -39,27 +47,33 @@ h6 {
 }
 
 p {
-    margin-top: $m-small;
-    margin-bottom: $m-medium;
+    margin-top: $m_t_small;
+    margin-bottom: $m_t_medium;
 }
 
+
+
+/******************************************************************
+TEXT_CLASS
+******************************************************************/
+
 .text {
-    font-family: $f-text;
+    font-family: $f_text;
 
     &--cbase {
-        color: $c-base;
+        color: $c_base;
     }
 
     &--cdark {
-        color: $c-dark;
+        color: $c_dark;
     }
 
     &--cmedium {
-        color: $c-medium;
+        color: $c_medium;
     }
 
     &--clight {
-        color: $c-light;
+        color: $c_light;
     }
 
     &--italic {

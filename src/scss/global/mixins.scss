@@ -1,8 +1,7 @@
 /******************************************************************
-STYLESHEET: STYLE
+STYLESHEET: MIXINS
 
     > BREAKPOINTS
-    > TYPOGRAPHY
     > KEYFRAMES
     > HORIZONTALLY_CENTER_BLOCK_ELEMENTS
     > HORIZONTALLY_AND_VERTICALLY_CENTER_BLOCK_ELEMENTS
@@ -13,8 +12,10 @@ STYLESHEET: STYLE
 ******************************************************************/
 
 
-// BREAKPOINTS
-// --> @include medium {...}
+/******************************************************************
+BREAKPOINTS
+--> @include medium {...}
+******************************************************************/
 
 @mixin small {
     @media only screen and (min-width: #{$w-small}) {
@@ -36,28 +37,10 @@ STYLESHEET: STYLE
 
 
 
-// TYPOGRAPHY
-// --> @include font-size(16/10);
-
-@mixin font-size($sizeValue: 16/10) {
-  font-size: ($sizeValue * 10) + px;
-  font-size: $sizeValue + rem;
-}
-
-@mixin line-height($sizeValue: 16/10) {
-  line-height: ($sizeValue * 10) + px;
-  line-height: $sizeValue + rem;
-}
-
-@mixin letter-spacing($sizeValue: 16/10) {
-  letter-spacing: ($sizeValue * 10) + px;
-  letter-spacing: $sizeValue + rem;
-}
-
-
-
-// KEYFRAMES
-// --> @include keyframes($name) {...}
+/******************************************************************
+KEYFRAMES
+--> @include keyframes($name) {...}
+******************************************************************/
 
 @mixin keyframes($name) {
     @-webkit-keyframes #{$name} {
@@ -71,8 +54,10 @@ STYLESHEET: STYLE
 
 
 
-// HORIZONTALLY_CENTER_BLOCK_ELEMENTS
-// --> @include center-block;
+/******************************************************************
+HORIZONTALLY_CENTER_BLOCK_ELEMENTS
+--> @include center-block;
+******************************************************************/
 
 @mixin center-block {
     display: block;
@@ -82,8 +67,10 @@ STYLESHEET: STYLE
 
 
 
-// HORIZONTALLY_AND_VERTICALLY_CENTER_BLOCK_ELEMENTS
-// --> @include center-both;
+/******************************************************************
+HORIZONTALLY_AND_VERTICALLY_CENTER_BLOCK_ELEMENTS
+--> @include center-both;
+******************************************************************/
 
 @mixin center-both {
     position: absolute;
@@ -94,8 +81,10 @@ STYLESHEET: STYLE
 
 
 
-// VERTICALLY_CENTER_BLOCK_ELEMENTS_KNOWN_HEIGHT
-// --> @include center-h(40px);
+/******************************************************************
+VERTICALLY_CENTER_BLOCK_ELEMENTS_KNOWN_HEIGHT
+--> @include center-h(40px);
+******************************************************************/
 
 @mixin center-h($height) {
     position: absolute;
@@ -106,8 +95,10 @@ STYLESHEET: STYLE
 
 
 
-// VERTICALLY_CENTER_BLOCK_ELEMENTS_UNKNOWN_HEIGHT
-// --> @include center-h-unknown;
+/******************************************************************
+VERTICALLY_CENTER_BLOCK_ELEMENTS_UNKNOWN_HEIGHT
+--> @include center-h-unknown;
+******************************************************************/
 
 @mixin center-h-unknown {
     position: relative;
@@ -116,8 +107,12 @@ STYLESHEET: STYLE
 }
 
 
-// CLEARFIX
-/* USAGE: @include clearfix; */
+
+/******************************************************************
+CLEARFIX
+--> @include clearfix;
+******************************************************************/
+
 @mixin clearfix {
   &:after {
     content: "";
