@@ -1,19 +1,12 @@
 /******************************************************************
 STYLESHEET: STYLE
 
-    > INCLUDES
-    > BASIC_STYLES
-
 This is the place where scss files get imported.
 ******************************************************************/
 
-
-// INCLUDES
-@import "includes/normalize";
-@import "susy";
-
-// BASIC_STYLES
-@import "global";
-@import "base";
+@import "includes";
+@import "settings";
+@import "tools";
 @import "layout";
+@import "base";
 @import "modules";

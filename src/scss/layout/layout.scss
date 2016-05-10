@@ -1,9 +1,10 @@
 /******************************************************************
 STYLESHEET: LAYOUT
 
-This is the place for all the layout styles.
+    > CONTAINER
+
 ******************************************************************/
 
-@import "layout/grid.scss";
-@import "layout/layout.scss";
-@import "layout/helpers.scss";
+.container {
+    padding: $m_b_medium;
+}
